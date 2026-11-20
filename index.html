@@ -218,8 +218,13 @@
               <label class="span-2">وصف المنتج<textarea name="description" rows="4" maxlength="700" placeholder="اكتب وصفاً واضحاً للمنتج..."></textarea></label>
               <label class="span-2 upload-field">صور المنتج
                 <input name="images" id="productImages" type="file" accept="image/*" multiple>
-                <span class="upload-hint">ارفع صورة أو أكثر. يفضّل صور واضحة بخلفية بسيطة.</span>
+                <span class="upload-hint">تظهر أول صورة فقط على بطاقة المنتج من الخارج، بينما باقي الصور تظهر داخل تفاصيل المنتج.</span>
                 <div class="image-preview-list" id="imagePreviewList"></div>
+              </label>
+              <label class="span-2 upload-field">فيديو المنتج (اختياري)
+                <input name="videos" id="productVideos" type="file" accept="video/mp4,video/webm,video/quicktime" multiple>
+                <span class="upload-hint">يمكنك رفع فيديو أو أكثر، وستظهر داخل تفاصيل المنتج بعد الضغط عليه.</span>
+                <div class="video-preview-list" id="videoPreviewList"></div>
               </label>
               <label class="check-label"><input type="checkbox" name="featured"> منتج مميز</label>
               <label class="check-label"><input type="checkbox" name="active" checked> عرض المنتج على الموقع</label>
@@ -235,7 +240,7 @@
     <div class="modal-backdrop" data-close-product></div>
     <div class="product-dialog" role="dialog" aria-modal="true" aria-labelledby="modalProductName">
       <button class="modal-close" data-close-product aria-label="إغلاق">×</button>
-      <div class="modal-product-visual" id="modalProductVisual"></div>
+      <div class="modal-product-visual"><div class="modal-media-stage" id="modalProductVisual"></div><div class="modal-media-thumbs" id="modalMediaThumbs" hidden></div></div>
       <div class="modal-product-copy">
         <div class="section-kicker" id="modalProductCategory">ALWAN / PRODUCT</div>
         <h2 id="modalProductName"></h2>
